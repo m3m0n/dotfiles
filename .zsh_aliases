@@ -3,7 +3,7 @@
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 #Dotfiles Git repo alias
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias gitdotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 #Guake Prefs
 alias guake-prefs='guake-prefs >> /dev/null &'
