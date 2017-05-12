@@ -1,0 +1,82 @@
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+#Dotfiles Git repo alias
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+#Guake Prefs
+alias guake-prefs='guake-prefs >> /dev/null &'
+alias :q='exit'
+#uname
+alias uname='uname -a'
+
+#xdg-open
+alias xopen='xdg-open $1 > /dev/null 2>&1'
+
+#file tree disk usage cwd
+alias tree='du -shx * | sort -h'
+
+#w3m terminal browser
+alias w3m='w3m -v'
+
+#Follow symbolic links
+alias cd='cd -P'
+
+#Hibernate
+alias hib='sudo gnome-screensaver-command --lock && sudo pm-hibernate'
+
+#Concatinate MP3s
+alias concatmp3='printf "file '%s'\n" ./*.mp3 > inputs.txt;
+ffmpeg -f concat -safe 0 -i inputs.txt -c copy fullbook.mp3'
+
+#Reapply Track Point settings
+alias trackpoint='{cat /sys/devices/platform/i8042/serio1/serio2/speed;
+		   cat /sys/devices/platform/i8042/serio1/serio2/sensitivity;
+		   sudo systemd-tmpfiles --prefix=/sys --create;}'
+
+#SSH locations
+alias sshmininet='ssh -Y mininet@192.168.56.101'
+alias sshhome='ssh -Y memon@sm7800.ddns.net'
+alias sshcdf='ssh -Y memonsha@cdf.toronto.edu'
+alias sftpcdf='sftp memonsha@cdf.toronto.edu'
+
+#tlp power
+alias powernow='sudo tlp stat -b | grep -E "energy_now|power_now|Charge"'
+alias batinfo='{ date ; sudo tlp stat -b | grep -E "energy_full|Capacity"; }'
+alias restartnetworkmanager='sudo systemctl restart network-manager'
+alias powertop='sudo powertop'
+alias rnm='restartnetworkmanager'
+
+#External Screen Res
+alias dphires='xrandr --output DP-1 --panning 2496x1404 --scale 1.3x1.3'
+alias dpnormal='xrandr --output DP-1 --panning 1920x1080 --scale 1x1'
+alias hdmihires='xrandr --output HDMI-1 --panning 2496x1404 --scale 1.3x1.3'
+alias hdminormal='xrandr --output HDMI-1 --panning 1920x1080 --scale 1x1'
+
+#Two Screen scaling
+alias twohires='xrandr --output eDP-1 --panning 2560x1440+0+0 --scale 1x1  --output DP-1 --panning 2496x1404+2560+0 --scale 1.3x1.3'
+alias twonormal='xrandr --output eDP-1 --panning 2560x1440+0+0 --scale 1x1  --output DP-1 --panning 1920x1080+2560+0 --scale 1x1'
+
+#Screen Res
+alias 1080p='xrandr --output eDP-1 --panning 1920x1080 --scale 0.75x0.75'
+alias normal='xrandr --output eDP-1 --panning 2560x1440 --scale 1x1'
+
+#Extended Desktop with VNC IN
+alias vncscreen='{
+xrandr --output LVDS1 --panning 1366x768 --scale 1x1;
+xrandr --fb 2732x768 --output LVDS1 --panning 2732x768+0+0/2732x768+0+0;
+sleep 1 # wait a moment;
+xrandr --fb 2732x768 --output LVDS1 --panning 1366x768+0+0/2732x768+0+0;
+echo "Extended screen. Starting VNC server";
+x11vnc -usepw -clip 1366x768+1367+0 -nocursorshape -nocursorpos;
+echo "Returning screen to normal";
+normal;
+}'
+
+#Notification for completion of long running term jobs
+notify(){
+    start=$(date +%s)
+    "$@"
+    [ $(($(date +%s) - start)) -le 15 ] || notify-send "Notification" "Long running command \"$(echo $@)\" took $(($(date +%s) - start)) seconds to finish"
+}
