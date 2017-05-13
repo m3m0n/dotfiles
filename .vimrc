@@ -76,6 +76,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set t_Co=256  " vim-monokai now only support 256 colours in terminal.
+set clipboard=unnamedplus
 set background=dark    " Setting dark mode for gruvbox
 colorscheme tender
 
