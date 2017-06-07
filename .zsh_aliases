@@ -4,6 +4,7 @@
 
 #Dotfiles Git repo alias
 alias gitdotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias gitdf='gitdotfiles'
 
 #Guake Prefs
 alias guake-prefs='guake-prefs >> /dev/null &'
