@@ -34,8 +34,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
-"Plug 'Valloric/YouCompleteMe'
 Plug 'Shougo/neocomplete.vim'
+Plug 'vim-scripts/nginx.vim'
 
 "Color Themes
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
