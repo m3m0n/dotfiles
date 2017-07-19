@@ -22,7 +22,7 @@ antigen bundle colored-man-pages
 antigen bundle git
 antigen bundle colorize
 antigen bundle cp
-antigen bundle vi-mode
+#antigen bundle vi-mode
 
 #Other Plugins
 antigen bundle zsh-users/zsh-autosuggestions
@@ -31,6 +31,10 @@ antigen bundle zsh-users/zsh-history-substring-search
 
 #Apply antigen options
 antigen apply
+
+#keybindings
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 #Set vim as default editor
 export EDITOR='vim'
