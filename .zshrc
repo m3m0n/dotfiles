@@ -22,6 +22,7 @@ antigen bundle colored-man-pages
 antigen bundle git
 antigen bundle colorize
 antigen bundle cp
+antigen bundle npm
 #antigen bundle vi-mode
 
 #Other Plugins

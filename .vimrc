@@ -36,6 +36,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'Shougo/neocomplete.vim'
 Plug 'vim-scripts/nginx.vim'
+Plug 'ethereum/vim-solidity'
 
 "Color Themes
 Plug 'sonph/onehalf', {'rtp': 'vim/'}

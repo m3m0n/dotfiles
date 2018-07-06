@@ -34,7 +34,10 @@ ffmpeg -f concat -safe 0 -i inputs.txt -c copy fullbook.mp3'
 #Reapply Track Point settings
 alias trackpoint='{cat /sys/devices/platform/i8042/serio1/serio2/speed;
 		   cat /sys/devices/platform/i8042/serio1/serio2/sensitivity;
-		   sudo systemd-tmpfiles --prefix=/sys --create;}'
+		   sudo systemd-tmpfiles --prefix=/sys --create;
+           echo "NEW speed + sens"
+           cat /sys/devices/platform/i8042/serio1/serio2/speed;
+		   cat /sys/devices/platform/i8042/serio1/serio2/sensitivity}'
 
 #SSH locations
 alias sshmininet='ssh -Y mininet@192.168.56.101'
