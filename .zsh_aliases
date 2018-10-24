@@ -41,7 +41,7 @@ alias trackpoint='{cat /sys/devices/platform/i8042/serio1/serio2/speed;
 
 #SSH locations
 alias sshmininet='ssh -Y mininet@192.168.56.101'
-alias sshhome='ssh -Y memon@sm7800.ddns.net'
+alias sshhome='ssh -Y memon@xenity.net'
 alias sshcdf='ssh -Y memonsha@cdf.toronto.edu'
 alias sftpcdf='sftp memonsha@cdf.toronto.edu'
 
