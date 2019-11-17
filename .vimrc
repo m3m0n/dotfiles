@@ -37,6 +37,8 @@ Plug 'tpope/vim-sensible'
 Plug 'Shougo/neocomplete.vim'
 Plug 'vim-scripts/nginx.vim'
 Plug 'ethereum/vim-solidity'
+Plug 'exaatto/vim-sas'
+Plug 'jceb/vim-orgmode'
 
 "Color Themes
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
@@ -51,7 +53,7 @@ call plug#end()
 
 "PlugInstall
 " 488 Class language syntax highlighting
-au BufNewFile,BufRead *.488 so ~/.vim/syntax/488.vim
+"au BufNewFile,BufRead *.488 so ~/.vim/syntax/488.vim
 
 "Mappings
 map <A-Right> gt
