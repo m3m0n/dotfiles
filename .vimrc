@@ -37,15 +37,12 @@ Plug 'tpope/vim-sensible'
 Plug 'Shougo/neocomplete.vim'
 Plug 'vim-scripts/nginx.vim'
 Plug 'ethereum/vim-solidity'
-<<<<<<< Updated upstream
 Plug 'exaatto/vim-sas'
 Plug 'jceb/vim-orgmode'
-=======
 Plug 'iamcco/markdown-preview.vim'
 Plug 'qpkorr/vim-bufkill'
 Plug 'vimwiki/vimwiki'
 
->>>>>>> Stashed changes
 
 "Color Themes
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
