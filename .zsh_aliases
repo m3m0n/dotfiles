@@ -47,7 +47,7 @@ alias sftpcdf='sftp memonsha@cdf.toronto.edu'
 
 #tlp power
 alias powernow='sudo tlp stat -b | grep -E "energy_now|power_now|Charge"'
-alias batinfo='{ date ; sudo tlp stat -b | grep -E "energy_full|Capacity"; }'
+alias batinfo='{ date ; sudo tlp-stat -b | grep -E "energy_full|Capacity"; }'
 alias restartnetworkmanager='sudo systemctl restart network-manager'
 alias powertop='sudo powertop'
 alias rnm='restartnetworkmanager'
