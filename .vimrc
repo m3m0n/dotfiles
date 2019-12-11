@@ -64,7 +64,7 @@ map <A-Right> gt
 map <A-Left> gT
 
 " vimwiki/vimwiki
-let g:vimwiki_list = [{'path': '~/Documents/vwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_list =[{'path':'~/Documents/vwiki/','syntax':'markdown','ext':'.md'}]
 
 "AirlineTheme setup
 let g:airline_powerline_fonts = 1
