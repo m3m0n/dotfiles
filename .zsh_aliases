@@ -6,6 +6,9 @@
 alias gitdotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias gitdf='gitdotfiles'
 
+#ToDo.sh CLI
+alias todo='todo.sh'
+
 #Guake Prefs
 alias guake-prefs='guake-prefs >> /dev/null &'
 alias :q='exit'
